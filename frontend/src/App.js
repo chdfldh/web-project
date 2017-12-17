@@ -1,17 +1,24 @@
 import React from 'react';
-import ReactDOM from'react-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import App from './App';
-
-ReactDOM.render(<App />,document.getElementById('root'));
-
-import React from 'react';
+import Login from './routes/Login';
+import Company from './routes/Company';
 
 class App extends React.Component { 
     
     render(){
         return(
-            <div>App</div>
+            <Router>
+                <div className="container">      
+                    <Switch>
+                        <Route path="/Login" component={Login}>
+                        </Route>
+                        <Route path="/company" component={Company}>
+                        </Route>
+                        <Route path="/company/:id"></Route>
+                    </Switch>
+                </div>
+            </Router>
         )
     }
 }
