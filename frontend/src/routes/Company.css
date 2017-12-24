@@ -7,7 +7,7 @@
 .thums .logo { width:40px; height:40px; background:#ccc; position:absolute; left:15px; bottom:15px; }
 
 .info { border-top:1px solid #ccc; border-bottom:1px solid #ccc; padding:15px; }
-.info h3 { font-size:18px; }
+.info h3 { font-size:18px; white-space:nowrap; word-wrap:normal; overflow:hidden; text-overflow:ellipsis; }
 .info .company { color:#999; }
 .info .rebate { font-size:12px; color:#555; }
 
@@ -15,3 +15,6 @@
 .opt .recom { float:left; }
 .opt .favorite { float:right; width:16px; height:16px; border-radius:50%; border:1px solid #ccc; margin:12px 0; }
 .opt .favorite.active { border-radius:50%; background-color:red; }
+
+.category { overflow:hidden; margin-bottom:10px; }
+.category li { float:left; background:#fff; border:1px solid #ddd; padding:15px 20px; margin:0 10px; cursor:pointer; list-style:none; }
